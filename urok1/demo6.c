@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#define ONE_K 1024
+
+int main()
+{
+	char *some_memory;
+	char *scan_ptr;
+	some_memory = (char*)malloc(ONE_K);
+	if (some_memory == NULL) exit(EXIT_FAILURE);
+         	scan_ptr = some_memory;
+	while(1) {
+             	printf("%p\n", scan_ptr);
+             	scan_ptr++;
+        }
+        exit(EXIT_SUCCESS);
+}
